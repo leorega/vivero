@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Edu+SA+Beginner:wght@700&display=swap');
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    height: 5vh;
+    box-shadow: 0 0 5px 5px #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 3rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}

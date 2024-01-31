@@ -1,0 +1,17 @@
+.nav {
+    width: 30%;
+    height: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(166, 251, 188);
+}
+
+.button {
+    text-decoration: none;
+}
+
+.button:hover {
+    border-top: 0.1rem solid white;
+}

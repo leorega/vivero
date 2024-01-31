@@ -1,0 +1,42 @@
+.div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9999;
+}
+
+.button_w, .button_i, .button_f {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.2rem;
+    padding: 0.5rem;
+}
+
+.button_w:hover, .button_i:hover, .button_f:hover {
+    background: rgb(217, 255, 205);
+    width: 100%;
+    transition: 1.5s;
+}
+
+.button_w {
+    background-color: rgb(24, 255, 105);
+}
+
+.button_i {
+    background-color: rgb(255, 104, 81);
+}
+
+.button_f {
+    background-color: rgb(57, 219, 255);
+}
+
+div a img {
+    width: 1.5rem;
+}
+
+

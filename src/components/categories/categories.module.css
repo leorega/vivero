@@ -1,0 +1,7 @@
+.div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 0.5rem;
+    height: 66vh;
+    align-items: center;
+}
