@@ -1,29 +1,29 @@
-import CategoryCard from '../categoryCard/CategoryCard';
-import vivero_vertical_4 from './images/vivero_vertical_4.jpg';
-import vivero_vertical_3 from './images/vivero_vertical_3.jpg';
-import vivero_vertical_6 from './images/vivero_vertical_6.jpg';
-import vivero_vertical_7 from './images/vivero_vertical_7.jpg';
-import vivero_vertical_8 from './images/vivero_vertical_8.jpg';
-import vivero_vertical_10 from './images/vivero_vertical_10.jpg';
-import styles from './categories.module.css';
+import CategoryCard from "../categoryCard/CategoryCard";
+import { useQuery, gql } from "@apollo/client";
+import styles from "./categories.module.css";
 
 const Categories = () => {
+    const { loading, error, data } = useQuery(gql`
+        query ALL_CATEGORIES {
+            allCategories {
+                name
+                id
+            }
+        }
+    `);
 
-    const categories = [
-        {title: 'Plantines', image: vivero_vertical_10}, 
-        {title: 'Interior', image: vivero_vertical_4},
-        {title: 'Exterior', image: vivero_vertical_8},
-        {title: 'Arreglos', image: vivero_vertical_7},
-        {title: 'Arbustos', image: vivero_vertical_3},
-        {title: 'Accesorios', image: vivero_vertical_6}];
+    console.log(data);
+
+    if (error) throw new Error(error);
 
     return (
         <div className={styles.div}>
-            {categories.map((category) => (
-                <CategoryCard key={category.title} category={category}/>
+            {loading && <h3>Cargando...</h3>}
+            {data.allCategories.map((category) => (
+                <CategoryCard key={category.id} categoryName={category.name} />
             ))}
         </div>
-    )
-}
+    );
+};
 
 export default Categories;
