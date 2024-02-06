@@ -6,8 +6,8 @@ const CategoryCard = (props) => {
 
     const navigate = useNavigate();
 
-    const handleNavigate = (title) => {
-        navigate(`/products/${title}`);
+    const handleNavigate = (category) => {
+        navigate(`/products/${category}`);
     };
 
     return (
