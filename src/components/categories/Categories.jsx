@@ -6,8 +6,11 @@ const Categories = () => {
     const { loading, data } = useQuery(gql`
         query ALL_CATEGORIES {
             allCategories {
-                name
                 id
+                name
+                image {
+                    url
+                }
             }
         }
     `);
@@ -17,10 +20,7 @@ const Categories = () => {
             {loading ? <h3>Cargando...</h3> : " "}
             {data &&
                 data.allCategories.map((category) => (
-                    <CategoryCard
-                        key={category.id}
-                        categoryName={category.name}
-                    />
+                    <CategoryCard key={category.id} category={category} />
                 ))}
         </div>
     );

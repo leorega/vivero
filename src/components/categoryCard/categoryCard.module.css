@@ -3,10 +3,12 @@
     display: inline-block;
     text-align: center;
     padding: 0.5rem;
+    height: 100%;
 }
 
 .img {
     width: 99%;
+    height: 100%;
     border-radius: 0.2rem;
     transition: transform .2s;
     cursor: pointer;

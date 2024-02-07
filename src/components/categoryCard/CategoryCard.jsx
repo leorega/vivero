@@ -2,7 +2,7 @@ import styles from "./categoryCard.module.css";
 import { useNavigate } from "react-router-dom";
 
 const CategoryCard = (props) => {
-    const { categoryName } = props;
+    const { category } = props;
 
     const navigate = useNavigate();
 
@@ -14,15 +14,15 @@ const CategoryCard = (props) => {
         <div className={styles.div}>
             <img
                 className={styles.img}
-                src={""}
-                alt={categoryName}
-                onClick={() => handleNavigate(categoryName)}
+                src={category.image.url}
+                alt={category.name}
+                onClick={() => handleNavigate(category.name)}
             />
             <h3
                 className={styles.title}
-                onClick={() => handleNavigate(categoryName)}
+                onClick={() => handleNavigate(category.name)}
             >
-                {categoryName}
+                {category.name}
             </h3>
         </div>
     );
