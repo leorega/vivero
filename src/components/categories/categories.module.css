@@ -1,7 +1,7 @@
 .div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding: 0.5rem;
+    padding: 2rem;
     height: 66vh;
     overflow: hidden;
     align-items: center;

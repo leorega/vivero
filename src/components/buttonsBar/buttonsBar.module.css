@@ -13,5 +13,6 @@
 }
 
 .button:hover {
-    border-top: 0.1rem solid white;
+    border-top: 0.1rem solid rgb(30, 190, 30);
+    color: rgb(30, 190, 30);
 }
